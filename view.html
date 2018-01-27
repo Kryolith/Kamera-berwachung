@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="mockup.css">
+
+    <title>View</title>
+</head>
+<body>
+<div class="container-fluid h100">
+    <div class="row h75">
+        <div class="col-9 h100">
+            <div class="row h50">
+                <div class="col h100 text-right" style="background-size: 100%; padding:10px; background-image: url('https://www.shop-alarm.de/pic/3042_4.jpg');">
+                    <button type="button" class="btn btn-outline-light btn-lg pull-right"><i class="fas fa-undo"></i></button>
+                </div>
+                <div class="col h100 text-right" style="background-size: 100%; padding:10px; background-image: url('https://www.shop-alarm.de/pic/3121_2.jpg');">
+                    <button type="button" class="btn btn-outline-light btn-lg pull-right"><i class="fas fa-undo"></i></button>
+                </div>
+            </div>
+            <div class="row h50">
+                <div class="col h100 text-right" style="background-size: 100%; padding:10px; background-image: url('https://www.shop-alarm.de/pic/3134_3.jpg');">
+                    <button type="button" class="btn btn-outline-light btn-lg pull-right"><i class="fas fa-undo"></i></button>
+                </div>
+                <div class="col h100 text-right" style="background-size: 100%; padding:10px; background-image: url('https://www.shop-alarm.de/pic/3147_2.jpg');">
+                    <button type="button" class="btn btn-outline-light btn-lg pull-right"><i class="fas fa-undo"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-3" style="border-left: 1px solid #CCC;">
+            <h4>Kamerawechsel</h4>
+            <h5>Nächster Kamerawechsel in <span class="badge badge-dark" id="swapTimer">LOADING</span></h5>
+            <button class="btn btn-outline-info btn-lg btn-block" id="lock" id="cameralock">
+                <i class="fas fa-lock"></i>
+                Kamerawechsel sperren
+            </button>
+            <hr>
+            <h4>Notfallbuttons</h4>
+            <button class="btn btn-outline-warning btn-lg btn-block" id="#krankenwagen">
+                <i class="fas fa-ambulance"></i>
+                Krankenwagen rufen
+            </button>
+            <button class="btn btn-outline-danger btn-lg btn-block" id="feuerwehr">
+                <i class="fas fa-fire"></i>
+                Feuerwehr rufen
+            </button>
+            <button class="btn btn-outline-success btn-lg btn-block" id="polizei">
+                <i class="fas fa-taxi"></i>
+                Polizei rufen
+            </button>
+        </div>
+    </div>
+    <div class="row h25" style="padding-top: 10px;">
+        <div class="col-2 h100">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" data-toggle="pill" id="localchat" href="#" role="tab">Lokaler Chat <span class="badge badge-light">4 neue Nachrichten</span></a>
+                <a class="nav-link" data-toggle="pill" id="globalchat" href="#">Globaler Chat</a>
+            </div>
+        </div>
+        <div class="col-10 h100">
+            <div class="alert alert-secondary" id="chat" style="height: calc(100% - 70px); overflow:auto;">
+                <p>
+                </p>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="chatInput" placeholder="Nachricht">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-primary" id="chatSubmit" type="button">Senden</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+<script src="view.js"></script>
+</body>
+</html>
