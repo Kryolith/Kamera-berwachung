@@ -14,3 +14,11 @@ html, body {
 .h50 {
     height: 50%;
 }
+
+.cam {
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	background-size: 100%;
+	padding:10px; 
+}

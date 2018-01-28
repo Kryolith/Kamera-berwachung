@@ -9,6 +9,7 @@ function registerCallback ( name, cbFun ) {
 function triggerEvent ( name, type, data ) {
 	switch ( type ) {
 		case 'message':
+		case 'ping':
 			for (var view in viewCb)
 				viewCb[view](type, data);
 			break;
