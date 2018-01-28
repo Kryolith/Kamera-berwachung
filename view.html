@@ -59,8 +59,14 @@
     <div class="row h25" style="padding-top: 10px;">
         <div class="col-2 h100">
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link active" data-toggle="pill" id="localchat" href="#" role="tab">Lokaler Chat <span class="badge badge-light">4 neue Nachrichten</span></a>
-                <a class="nav-link" data-toggle="pill" id="globalchat" href="#">Globaler Chat</a>
+                <a class="nav-link active" data-toggle="pill" id="localchat" href="#" role="tab">
+					Lokaler Chat 
+					<span id="unreadLocal" style="display:none;" class="badge badge-light">?</span>
+				</a>
+                <a class="nav-link" data-toggle="pill" id="globalchat" href="#">
+					Globaler Chat 
+					<span id="unreadGlobal" style="display:none;" class="badge badge-light">?</span>
+				</a>
             </div>
         </div>
         <div class="col-10 h100">
@@ -77,6 +83,11 @@
         </div>
     </div>
 </div>
+
+<audio id="chatSound">
+	<source src="beep.mp3" type="audio/mpeg">
+	Your browser does not support the audio element
+</audio>
 
 
 <!-- Optional JavaScript -->

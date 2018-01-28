@@ -13,6 +13,9 @@ var chat = $('#chat');
 var chatInput = $('#chatInput');
 var chatSubmit = $('#chatSubmit');
 var swapTimer = $('#swapTimer');
+var unreadLocal = $('#unreadLocal');
+var unreadGlobal = $('#unreadGlobal');
+var chatSound = $('#chatSound');
 
 // Der aktuell aktive Chat in dem View
 // 1: lokaler Chat
@@ -24,6 +27,9 @@ var windowName = document.location.hash.substr(1);
 
 // Eventfunktion
 var triggerEvent = window.opener.triggerEvent;
+
+// Counter für ungelesene Nachrichten im anderen Tab
+var unreadMessages = 0;
 
 console.log(windowName);
 
@@ -41,6 +47,8 @@ $(function () {
 		if(currentChat == 2) {
 			localChat.addClass('active');
 			globalChat.removeClass('active');
+			unreadLocal.hide();
+			unreadMessages = 0;
 			clearChat();
 			state.localChat.forEach(addMessageToChat);
 			currentChat = 1;
@@ -52,6 +60,8 @@ $(function () {
 		if(currentChat == 1) {
 			globalChat.addClass('active');
 			localChat.removeClass('active');
+			unreadGlobal.hide();
+			unreadMessages = 0;
 			clearChat();
 			state.globalChat.forEach(addMessageToChat);
 			currentChat = 2;
@@ -85,8 +95,28 @@ $(function () {
 				if(currentChat == data.type)
 					addMessageToChat(data);
 				else{
-					// TODO: Zeige neue Nachricht badge an
+					// Zeige neue Nachricht badge an
+					unreadMessages++;
+					
+					if(currentChat == 1) {
+						unreadGlobal.html(unreadMessages + " neu");
+						
+						if(unreadMessages == 1)
+							unreadGlobal.show();
+					}else{
+						unreadLocal.html(unreadMessages + " neu");
+						
+						if(unreadMessages == 1)
+							unreadLocal.show();
+					}
+						
 				}
+				
+				// Spiele chat sound nur auf einem view ab
+				// Hört man sonst doppelt
+				if(windowName == "view1")
+					chatSound.get(0).play();
+				
 				break;
 		}
     });
