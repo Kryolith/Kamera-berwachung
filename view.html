@@ -16,19 +16,31 @@
 <div class="container-fluid h100">
     <div class="row h75">
         <div class="col-9 h100" style="position: relative;">
-			<div id="cam1" class="cam" style="left: 0; top: 0;background-image: url('https://www.shop-alarm.de/pic/3042_4.jpg');">
-				<button type="button" class="btn btn-outline-light btn-sm"><i class="fas fa-undo"></i></button>
-				<button type="button" id="focus1"  class="btn btn-outline-light btn-sm"><i class="fas fa-search"></i></button>
+			<div id="cam1" class="cam" style="left: 0; top: 0;">
+				<video controls autoplay loop width="640" height="360" preload="true">
+					<source src="./Videos/View_1/low_res/1.mp4" type="video/mp4"/>
+				</video>
+				<!--button type="button" class="btn btn-outline-light btn-sm"><i class="fas fa-undo"></i></button>
+				<button type="button" id="focus1"  class="btn btn-outline-light btn-sm"><i class="fas fa-search"></i></button-->
 			</div>
-			<div id="cam2" class="cam" style="top:0; right: 0; background-image: url('https://www.shop-alarm.de/pic/3121_2.jpg');">
+			<div id="cam2" class="cam" style="top:0; right: 0;">
+				<video controls autoplay loop width="640" height="360" preload="true">
+					<source src="./Videos/View_1/low_res/2.mp4" type="video/mp4"/>
+				</video>
 				<button type="button" class="btn btn-outline-light btn-sm"><i class="fas fa-undo"></i></button>
 				<button type="button" id="focus2"  class="btn btn-outline-light btn-sm"><i class="fas fa-search"></i></button>
 			</div>
-			<div id="cam3" class="cam" style="left: 0; bottom: 0; background-image: url('https://www.shop-alarm.de/pic/3134_3.jpg');">
+			<div id="cam3" class="cam" style="left: 0; bottom: 0;">
+				<video controls autoplay loop width="640" height="360" preload="true">
+					<source src="./Videos/View_1/low_res/3.mp4" type="video/mp4"/>
+				</video>
 				<button type="button" class="btn btn-outline-light btn-sm"><i class="fas fa-undo"></i></button>
 				<button type="button" id="focus3"  class="btn btn-outline-light btn-sm"><i class="fas fa-search"></i></button>
 			</div>
-			<div id="cam4" class="cam" style="right: 0; bottom: 0; background-image: url('https://www.shop-alarm.de/pic/3147_2.jpg');">
+			<div id="cam4" class="cam" style="right: 0; bottom: 0;">
+				<video controls autoplay loop width="640" height="360" preload="true">
+					<source src="./Videos/View_1/low_res/4.mp4" type="video/mp4"/>
+				</video>
 				<button type="button" class="btn btn-outline-light btn-sm"><i class="fas fa-undo"></i></button>
 				<button type="button" id="focus4" class="btn btn-outline-light btn-sm"><i class="fas fa-search"></i></button>
 			</div>
@@ -57,6 +69,24 @@
 			<button class="btn btn-outline-dark btn-lg btn-block" id="test">
 				Test
 			</button>
+				<button class="btn btn-outline-dark btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+					Erweiterte Schnellauswahl
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="#">Brand</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a class="dropdown-item" href="#">Massenpanik</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a class="dropdown-item" href="#">Überfüllter Bereich</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a class="dropdown-item" href="#">Ungewöhnliches Objekt</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a class="dropdown-item" href="#">Unfall</a></li>
+					<div class="dropdown-divider"></div>
+					<li><a class="dropdown-item" href="#">Körperliche Auseinandersetzung</a></li>
+				</ul>
+				
         </div>
     </div>
     <div class="row h25" style="padding-top: 10px;">
